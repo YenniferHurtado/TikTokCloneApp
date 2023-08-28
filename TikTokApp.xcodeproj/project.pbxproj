@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE174E0D2A9D03990021BD9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E0C2A9D03990021BD9D /* AppDelegate.swift */; };
 		CE174E0F2A9D03990021BD9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E0E2A9D03990021BD9D /* SceneDelegate.swift */; };
-		CE174E112A9D03990021BD9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E102A9D03990021BD9D /* ViewController.swift */; };
+		CE174E112A9D03990021BD9D /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E102A9D03990021BD9D /* WelcomeVC.swift */; };
 		CE174E142A9D03990021BD9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE174E122A9D03990021BD9D /* Main.storyboard */; };
 		CE174E162A9D03990021BD9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE174E152A9D03990021BD9D /* Assets.xcassets */; };
 		CE174E192A9D03990021BD9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE174E172A9D03990021BD9D /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 		CE174E092A9D03990021BD9D /* TikTokApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTokApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE174E0C2A9D03990021BD9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE174E0E2A9D03990021BD9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE174E102A9D03990021BD9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE174E102A9D03990021BD9D /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		CE174E132A9D03990021BD9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE174E152A9D03990021BD9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE174E182A9D03990021BD9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,7 +68,6 @@
 				CE174E232A9D0B260021BD9D /* Flows */,
 				CE174E0C2A9D03990021BD9D /* AppDelegate.swift */,
 				CE174E0E2A9D03990021BD9D /* SceneDelegate.swift */,
-				CE174E102A9D03990021BD9D /* ViewController.swift */,
 				CE174E122A9D03990021BD9D /* Main.storyboard */,
 				CE174E152A9D03990021BD9D /* Assets.xcassets */,
 				CE174E172A9D03990021BD9D /* LaunchScreen.storyboard */,
@@ -169,6 +168,7 @@
 		CE174E322A9D0BFF0021BD9D /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				CE174E102A9D03990021BD9D /* WelcomeVC.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -253,7 +253,7 @@
 			files = (
 				CE174E262A9D0B750021BD9D /* UIView.swift in Sources */,
 				CE174E2D2A9D0BB70021BD9D /* Feed.swift in Sources */,
-				CE174E112A9D03990021BD9D /* ViewController.swift in Sources */,
+				CE174E112A9D03990021BD9D /* WelcomeVC.swift in Sources */,
 				CE174E0D2A9D03990021BD9D /* AppDelegate.swift in Sources */,
 				CE174E0F2A9D03990021BD9D /* SceneDelegate.swift in Sources */,
 				CE174E2B2A9D0BB00021BD9D /* Endpoint.swift in Sources */,
