@@ -108,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				CE174E332A9D0C0B0021BD9D /* CreateAccount */,
-				CE174E322A9D0BFF0021BD9D /* SignUp */,
+				CE174E322A9D0BFF0021BD9D /* Welcome */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -166,11 +166,11 @@
 			path = Environment;
 			sourceTree = "<group>";
 		};
-		CE174E322A9D0BFF0021BD9D /* SignUp */ = {
+		CE174E322A9D0BFF0021BD9D /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = SignUp;
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		CE174E332A9D0C0B0021BD9D /* CreateAccount */ = {
