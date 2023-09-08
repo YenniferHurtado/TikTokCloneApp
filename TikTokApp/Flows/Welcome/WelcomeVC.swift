@@ -26,5 +26,10 @@ class WelcomeVC: UIViewController {
         loginEmailButton.addCornerRadius(18)
     }
 
+    @IBAction func signUpDidTapped(_ sender: Any) {
+//        let storyboard = UIStoryboard(name: "", bundle: <#T##Bundle?#>)
+//        let controller = SigUpViewController()
+//        navigationController?.pushViewController(controller, animated: true)
+    }
 }
 
