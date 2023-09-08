@@ -9,20 +9,23 @@
 /* Begin PBXBuildFile section */
 		CE174E0D2A9D03990021BD9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E0C2A9D03990021BD9D /* AppDelegate.swift */; };
 		CE174E0F2A9D03990021BD9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E0E2A9D03990021BD9D /* SceneDelegate.swift */; };
-		CE174E112A9D03990021BD9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E102A9D03990021BD9D /* ViewController.swift */; };
+		CE174E112A9D03990021BD9D /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E102A9D03990021BD9D /* WelcomeVC.swift */; };
 		CE174E142A9D03990021BD9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE174E122A9D03990021BD9D /* Main.storyboard */; };
 		CE174E162A9D03990021BD9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE174E152A9D03990021BD9D /* Assets.xcassets */; };
 		CE174E192A9D03990021BD9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE174E172A9D03990021BD9D /* LaunchScreen.storyboard */; };
 		CE174E262A9D0B750021BD9D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E252A9D0B750021BD9D /* UIView.swift */; };
 		CE174E2B2A9D0BB00021BD9D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E2A2A9D0BB00021BD9D /* Endpoint.swift */; };
 		CE174E2D2A9D0BB70021BD9D /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E2C2A9D0BB70021BD9D /* Feed.swift */; };
+		CE174E3F2A9D5C950021BD9D /* WelcomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E3E2A9D5C950021BD9D /* WelcomeModel.swift */; };
+		CE174E412A9D5CA30021BD9D /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E402A9D5CA30021BD9D /* WelcomeViewModel.swift */; };
+		CE174E4B2A9D6D3F0021BD9D /* SigUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E4A2A9D6D3F0021BD9D /* SigUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE174E092A9D03990021BD9D /* TikTokApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTokApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE174E0C2A9D03990021BD9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE174E0E2A9D03990021BD9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE174E102A9D03990021BD9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE174E102A9D03990021BD9D /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		CE174E132A9D03990021BD9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE174E152A9D03990021BD9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE174E182A9D03990021BD9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +33,9 @@
 		CE174E252A9D0B750021BD9D /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		CE174E2A2A9D0BB00021BD9D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		CE174E2C2A9D0BB70021BD9D /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		CE174E3E2A9D5C950021BD9D /* WelcomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeModel.swift; sourceTree = "<group>"; };
+		CE174E402A9D5CA30021BD9D /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		CE174E4A2A9D6D3F0021BD9D /* SigUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SigUpViewController.swift; path = TikTokApp/Flows/SignUp/SigUpViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +74,6 @@
 				CE174E232A9D0B260021BD9D /* Flows */,
 				CE174E0C2A9D03990021BD9D /* AppDelegate.swift */,
 				CE174E0E2A9D03990021BD9D /* SceneDelegate.swift */,
-				CE174E102A9D03990021BD9D /* ViewController.swift */,
 				CE174E122A9D03990021BD9D /* Main.storyboard */,
 				CE174E152A9D03990021BD9D /* Assets.xcassets */,
 				CE174E172A9D03990021BD9D /* LaunchScreen.storyboard */,
@@ -107,8 +112,8 @@
 		CE174E232A9D0B260021BD9D /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				CE174E332A9D0C0B0021BD9D /* CreateAccount */,
-				CE174E322A9D0BFF0021BD9D /* SignUp */,
+				CE174E4C2A9D6D560021BD9D /* SignUp */,
+				CE174E322A9D0BFF0021BD9D /* Welcome */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -166,18 +171,22 @@
 			path = Environment;
 			sourceTree = "<group>";
 		};
-		CE174E322A9D0BFF0021BD9D /* SignUp */ = {
+		CE174E322A9D0BFF0021BD9D /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				CE174E102A9D03990021BD9D /* WelcomeVC.swift */,
+				CE174E402A9D5CA30021BD9D /* WelcomeViewModel.swift */,
+				CE174E3E2A9D5C950021BD9D /* WelcomeModel.swift */,
 			);
-			path = SignUp;
+			path = Welcome;
 			sourceTree = "<group>";
 		};
-		CE174E332A9D0C0B0021BD9D /* CreateAccount */ = {
+		CE174E4C2A9D6D560021BD9D /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				CE174E4A2A9D6D3F0021BD9D /* SigUpViewController.swift */,
 			);
-			path = CreateAccount;
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,9 +260,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE174E4B2A9D6D3F0021BD9D /* SigUpViewController.swift in Sources */,
 				CE174E262A9D0B750021BD9D /* UIView.swift in Sources */,
+				CE174E412A9D5CA30021BD9D /* WelcomeViewModel.swift in Sources */,
 				CE174E2D2A9D0BB70021BD9D /* Feed.swift in Sources */,
-				CE174E112A9D03990021BD9D /* ViewController.swift in Sources */,
+				CE174E3F2A9D5C950021BD9D /* WelcomeModel.swift in Sources */,
+				CE174E112A9D03990021BD9D /* WelcomeVC.swift in Sources */,
 				CE174E0D2A9D03990021BD9D /* AppDelegate.swift in Sources */,
 				CE174E0F2A9D03990021BD9D /* SceneDelegate.swift in Sources */,
 				CE174E2B2A9D0BB00021BD9D /* Endpoint.swift in Sources */,
