@@ -1,5 +1,5 @@
 //
-//  WelcomeVC.swift
+//  WelcomeView.swift
 //  TikTokApp
 //
 //  Created by Yennifer Hurtado Arce on 28/08/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WelcomeVC: UIViewController {
+class WelcomeView: UIViewController {
 
     @IBOutlet weak var signUpEmailButton: UIButton!
     @IBOutlet weak var loginFacebookButton: UIButton!
@@ -27,9 +27,8 @@ class WelcomeVC: UIViewController {
     }
 
     @IBAction func signUpDidTapped(_ sender: Any) {
-//        let storyboard = UIStoryboard(name: "", bundle: <#T##Bundle?#>)
-//        let controller = SigUpViewController()
-//        navigationController?.pushViewController(controller, animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SignUpView") as! SignUpView
+        navigationController?.pushViewController(storyboard, animated: true)
     }
 }
 
