@@ -27,9 +27,8 @@ class WelcomeView: UIViewController {
     }
 
     @IBAction func signUpDidTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                            .instantiateViewController(identifier: "SignUpView") as! SignUpView
-        navigationController?.pushViewController(storyboard, animated: true)
+        navigationController?.pushViewController(to: SignUpView(), id: .signUpView)
     }
 }
+
 
