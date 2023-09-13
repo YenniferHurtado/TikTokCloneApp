@@ -13,7 +13,6 @@ extension UINavigationController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(identifier: id.rawValue)
-        
         self.pushViewController(controller, animated: true)
     }
 }

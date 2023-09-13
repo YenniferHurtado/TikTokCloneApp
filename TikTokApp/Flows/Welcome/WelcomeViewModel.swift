@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+enum SocialLoginType {
+    case facebook
+    case google
+}
+
+class WelcomeViewModel {
+    
+    func startSocialLogin(for type: SocialLoginType) {
+    }
+    
+}

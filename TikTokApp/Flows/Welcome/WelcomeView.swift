@@ -14,6 +14,8 @@ class WelcomeView: UIViewController {
     @IBOutlet weak var loginGoogleButton: UIButton!
     @IBOutlet weak var loginEmailButton: UIButton!
     
+    let viewModel = WelcomeViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -26,8 +28,23 @@ class WelcomeView: UIViewController {
         loginEmailButton.addCornerRadius(18)
     }
 
-    @IBAction func signUpDidTapped(_ sender: Any) {
+    @IBAction func signUpEmailDidTapped(_ sender: Any) {
         navigationController?.pushViewController(to: SignUpView(), id: .signUpView)
+    }
+    
+    @IBAction func loginFbDidTapped(_ sender: Any) {
+        viewModel.startSocialLogin(for: .facebook)
+    }
+    
+    @IBAction func loginGoogleDidTapped(_ sender: Any) {
+        viewModel.startSocialLogin(for: .google)
+    }
+    
+    @IBAction func loginEmailDidTapped(_ sender: Any) {
+        navigationController?.pushViewController(to: SignUpView(), id: .signUpView)
+    }
+
+    @IBAction func termOfUseDidTapped(_ sender: Any) {
     }
 }
 
