@@ -60,9 +60,6 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login with Facebook"/>
-                                <connections>
-                                    <action selector="loginFbDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RMe-pV-hVh"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyn-Pv-R4g">
                                 <rect key="frame" x="60" y="516" width="273" height="35"/>
@@ -73,9 +70,6 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login with Google"/>
-                                <connections>
-                                    <action selector="loginGoogleDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Olh-xr-Lqw"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkN-SW-EIO">
                                 <rect key="frame" x="60" y="609" width="273" height="35"/>

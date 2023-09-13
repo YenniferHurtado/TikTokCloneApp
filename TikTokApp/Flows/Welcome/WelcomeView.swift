@@ -32,14 +32,6 @@ class WelcomeView: UIViewController {
         navigationController?.pushViewController(to: SignUpView(), id: .signUpView)
     }
     
-    @IBAction func loginFbDidTapped(_ sender: Any) {
-        viewModel.startSocialLogin(for: .facebook)
-    }
-    
-    @IBAction func loginGoogleDidTapped(_ sender: Any) {
-        viewModel.startSocialLogin(for: .google)
-    }
-    
     @IBAction func loginEmailDidTapped(_ sender: Any) {
         navigationController?.pushViewController(to: SignUpView(), id: .signUpView)
     }
