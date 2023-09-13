@@ -9,21 +9,60 @@ import UIKit
 
 class SignUpView: UIViewController {
 
+    @IBOutlet weak var profileImageView: UIImageView!
+    
+    //UITextfields
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var emailTextfield: UITextField!
+    @IBOutlet weak var passwordTextfield: UITextField!
+    
+    //UIView
+    @IBOutlet weak var usernameContainerView: UIView!
+    @IBOutlet weak var emailContainerView: UIView!
+    @IBOutlet weak var passwordContainerView: UIView!
+    
+    //UIButton
+    @IBOutlet weak var signUpButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBar()
+        setupUI()
+    }
+}
 
-        // Do any additional setup after loading the view.
+//MARK: SIGN UP - UI
+private extension SignUpView {
+    
+    func setNavigationBar() {
+        navigationItem.title = "Create new Account"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupUI() {
+        
+        addcornerRadius(to: [usernameContainerView,
+                             emailContainerView,
+                             passwordContainerView,
+                             signUpButton], radius: 20)
+        addcornerRadius(to: [profileImageView], radius: 60)
+        
+        addBorderStyle(to: [userNameTextField,
+                            emailTextfield,
+                            passwordTextfield], style: .none)
+        
+        func addcornerRadius(to multipleViews: [UIView], radius: CGFloat = 0) {
+            multipleViews.forEach { view in
+                view.addCornerRadius(radius)
+                view.addBorder(color: .borderGray)
+            }
+        }
+        
+        func addBorderStyle(to textfields: [UITextField], style: UITextField.BorderStyle) {
+            textfields.forEach { textfield in
+                textfield.borderStyle = style
+            }
+        }
     }
-    */
-
+    
 }
