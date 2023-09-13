@@ -158,7 +158,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="christopher-campbell-rDEOVtE7vOs-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="KC8-RX-T0a">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image_signUpView" translatesAutoresizingMaskIntoConstraints="NO" id="KC8-RX-T0a">
                                 <rect key="frame" x="136.66666666666666" y="109" width="119.99999999999997" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="BrP-QX-RB5"/>
@@ -168,13 +168,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQc-3b-2Zj">
                                 <rect key="frame" x="25" y="269" width="343" height="40"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w2b-gf-mgq">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w2b-gf-mgq">
                                         <rect key="frame" x="15" y="2.6666666666666856" width="323" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBrownColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="w2b-gf-mgq" secondAttribute="trailing" constant="5" id="Ewd-Sr-Ti1"/>
                                     <constraint firstAttribute="height" constant="40" id="IPP-zZ-lLg"/>
@@ -186,13 +185,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wch-ky-pVI">
                                 <rect key="frame" x="25" y="319" width="343" height="40"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0zF-kt-p8L">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0zF-kt-p8L">
                                         <rect key="frame" x="15" y="2.6666666666666856" width="323" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBrownColor"/>
                                 <constraints>
                                     <constraint firstItem="0zF-kt-p8L" firstAttribute="leading" secondItem="Wch-ky-pVI" secondAttribute="leading" constant="15" id="4LW-Jc-ZMQ"/>
                                     <constraint firstAttribute="bottom" secondItem="0zF-kt-p8L" secondAttribute="bottom" constant="2.5" id="EvU-Q1-Vju"/>
@@ -204,13 +202,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h42-3D-au4">
                                 <rect key="frame" x="25" y="369" width="343" height="40"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M8A-xv-1x5">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M8A-xv-1x5">
                                         <rect key="frame" x="15" y="2.6666666666666856" width="323" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBrownColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="M8A-xv-1x5" secondAttribute="bottom" constant="2.5" id="67k-Ci-Byx"/>
                                     <constraint firstAttribute="height" constant="40" id="BfM-Pn-xYa"/>
@@ -248,6 +245,16 @@
                             <constraint firstItem="Wch-ky-pVI" firstAttribute="leading" secondItem="p72-mu-7Lr" secondAttribute="leading" constant="25" id="l87-kW-nx3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailContainerView" destination="Wch-ky-pVI" id="k2h-0Y-hO0"/>
+                        <outlet property="emailTextfield" destination="0zF-kt-p8L" id="sbw-Ky-21m"/>
+                        <outlet property="passwordContainerView" destination="h42-3D-au4" id="hNS-dw-0BE"/>
+                        <outlet property="passwordTextfield" destination="M8A-xv-1x5" id="BZj-N8-e31"/>
+                        <outlet property="profileImageView" destination="KC8-RX-T0a" id="Q0I-a8-NaN"/>
+                        <outlet property="signUpButton" destination="s3q-RD-vbg" id="Wqe-xO-lyt"/>
+                        <outlet property="userNameTextField" destination="w2b-gf-mgq" id="Rsc-eJ-uzi"/>
+                        <outlet property="usernameContainerView" destination="fQc-3b-2Zj" id="8Lx-nk-FV7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DrC-ed-12N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -273,16 +280,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="christopher-campbell-rDEOVtE7vOs-unsplash" width="640" height="427"/>
+        <image name="profile_image_signUpView" width="640" height="427"/>
         <image name="tiktok_icon_welcomeView" width="2000" height="1125"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

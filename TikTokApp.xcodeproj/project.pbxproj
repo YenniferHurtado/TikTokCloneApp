@@ -23,6 +23,7 @@
 		CE174E722AAE21B80021BD9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE174E712AAE21B80021BD9D /* GoogleService-Info.plist */; };
 		CE174E782AB109B60021BD9D /* UINavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E772AB109B60021BD9D /* UINavigation.swift */; };
 		CE174E7C2AB10CA00021BD9D /* ViewsID.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E7B2AB10CA00021BD9D /* ViewsID.swift */; };
+		CE174E8A2AB22A460021BD9D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E892AB22A460021BD9D /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		CE174E772AB109B60021BD9D /* UINavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigation.swift; sourceTree = "<group>"; };
 		CE174E7B2AB10CA00021BD9D /* ViewsID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsID.swift; sourceTree = "<group>"; };
 		CE174E7D2AB121380021BD9D /* TikTokAppRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TikTokAppRelease.entitlements; sourceTree = "<group>"; };
+		CE174E892AB22A460021BD9D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DC788206BD398ABE07258050 /* Pods-TikTokApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokApp.release.xcconfig"; path = "Target Support Files/Pods-TikTokApp/Pods-TikTokApp.release.xcconfig"; sourceTree = "<group>"; };
 		DF26C54C2F89258B75985E81 /* Pods-TikTokApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokApp.debug.xcconfig"; path = "Target Support Files/Pods-TikTokApp/Pods-TikTokApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 				CE174E252A9D0B750021BD9D /* UIView.swift */,
 				CE174E772AB109B60021BD9D /* UINavigation.swift */,
 				CE174E7B2AB10CA00021BD9D /* ViewsID.swift */,
+				CE174E892AB22A460021BD9D /* Colors.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE174E4B2A9D6D3F0021BD9D /* SignUpView.swift in Sources */,
+				CE174E8A2AB22A460021BD9D /* Colors.swift in Sources */,
 				CE174E262A9D0B750021BD9D /* UIView.swift in Sources */,
 				CE174E412A9D5CA30021BD9D /* WelcomeViewModel.swift in Sources */,
 				CE174E2D2A9D0BB70021BD9D /* Feed.swift in Sources */,
