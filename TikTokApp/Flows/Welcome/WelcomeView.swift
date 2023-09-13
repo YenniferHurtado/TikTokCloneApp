@@ -31,13 +31,6 @@ class WelcomeView: UIViewController {
     @IBAction func signUpEmailDidTapped(_ sender: Any) {
         navigationController?.pushViewController(to: SignUpView(), id: .signUpView)
     }
-    
-    @IBAction func loginEmailDidTapped(_ sender: Any) {
-        navigationController?.pushViewController(to: SignUpView(), id: .signUpView)
-    }
-
-    @IBAction func termOfUseDidTapped(_ sender: Any) {
-    }
 }
 
 
