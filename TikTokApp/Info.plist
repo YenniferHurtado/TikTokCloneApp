@@ -30,12 +30,6 @@
 			</array>
 		</dict>
 	</array>
-	<key>FacebookAppID</key>
-	<string>867047884857450</string>
-	<key>FacebookClientToken</key>
-	<string>3211a24e9e35085d772945bcc6a9bff4</string>
-	<key>FacebookDisplayName</key>
-	<string>TikTok Clone</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

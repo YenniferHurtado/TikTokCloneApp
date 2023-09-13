@@ -11,6 +11,4 @@ target 'TikTokApp' do
   pod 'FirebaseCore'
   pod 'FirebaseAnalytics'
 
-  pod 'FBSDKLoginKit'
-
 end

@@ -6,12 +6,6 @@
 //
 
 import Foundation
-import FBSDKLoginKit
-
-enum SocialLoginType {
-    case facebook
-    case google
-}
 
 class WelcomeViewModel {
 
