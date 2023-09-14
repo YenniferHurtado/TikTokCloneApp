@@ -80,6 +80,9 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login with E-mail"/>
+                                <connections>
+                                    <action selector="loginEmailButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LFR-Om-KdD"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="531-wR-Yor">
                                 <rect key="frame" x="186" y="428" width="21" height="18"/>
@@ -148,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="968.70229007633588" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="865" y="-2"/>
         </scene>
         <!--Sign Up View-->
         <scene sceneID="0BW-ed-zLU">
@@ -258,7 +261,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DrC-ed-12N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1739.6946564885495" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1633" y="-2"/>
+        </scene>
+        <!--Sign In View-->
+        <scene sceneID="Tdb-Mw-xNi">
+            <objects>
+                <viewController storyboardIdentifier="SignInView" id="mYv-96-6GT" customClass="SignInView" customModule="TikTokApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ypa-GO-P1F">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBL-Ch-mbI">
+                                <rect key="frame" x="20" y="119" width="353" height="49"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="7EM-uE-43E"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FND-zt-CiY">
+                                <rect key="frame" x="20" y="188" width="353" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="f1f-x5-Tr9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yzQ-Te-xGQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yzQ-Te-xGQ" firstAttribute="trailing" secondItem="MBL-Ch-mbI" secondAttribute="trailing" constant="20" id="D0t-1O-SO8"/>
+                            <constraint firstItem="yzQ-Te-xGQ" firstAttribute="trailing" secondItem="FND-zt-CiY" secondAttribute="trailing" constant="20" id="Eaq-7p-5mc"/>
+                            <constraint firstItem="MBL-Ch-mbI" firstAttribute="leading" secondItem="yzQ-Te-xGQ" secondAttribute="leading" constant="20" id="Fxd-eo-pSI"/>
+                            <constraint firstItem="FND-zt-CiY" firstAttribute="leading" secondItem="yzQ-Te-xGQ" secondAttribute="leading" constant="20" id="eqG-Ez-8dx"/>
+                            <constraint firstItem="MBL-Ch-mbI" firstAttribute="top" secondItem="yzQ-Te-xGQ" secondAttribute="top" constant="60" id="rOS-Kb-wgU"/>
+                            <constraint firstItem="FND-zt-CiY" firstAttribute="top" secondItem="MBL-Ch-mbI" secondAttribute="bottom" constant="20" id="yBC-RX-4kO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iXG-Zd-MAU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2361" y="-2"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xxz-Si-Cj7">

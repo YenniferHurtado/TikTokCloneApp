@@ -9,4 +9,6 @@ import Foundation
 
 enum ViewsID: String {
     case signUpView = "SignUpView"
+    case signInView = "SignInView"
+
 }
