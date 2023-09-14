@@ -22,10 +22,10 @@ class WelcomeView: UIViewController {
     }
 
     func setupUI() {
-        signUpEmailButton.addCornerRadius(18)
-        loginFacebookButton.addCornerRadius(18)
-        loginGoogleButton.addCornerRadius(18)
-        loginEmailButton.addCornerRadius(18)
+        Border.addcornerRadius(to: [signUpEmailButton,
+                                    loginFacebookButton,
+                                    loginGoogleButton,
+                                    loginEmailButton], radius: 18)
     }
 
     @IBAction func signUpEmailDidTapped(_ sender: Any) {

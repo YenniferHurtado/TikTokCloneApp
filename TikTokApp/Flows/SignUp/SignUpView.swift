@@ -40,29 +40,17 @@ private extension SignUpView {
     }
     
     func setupUI() {
+
+        Border.addcornerRadius(to: [usernameContainerView,
+                                    emailContainerView,
+                                    passwordContainerView,
+                                    signUpButton], radius: 20)
         
-        addcornerRadius(to: [usernameContainerView,
-                             emailContainerView,
-                             passwordContainerView,
-                             signUpButton], radius: 20)
-        addcornerRadius(to: [profileImageView], radius: 60)
+        Border.addcornerRadius(to: [profileImageView], radius: 60)
         
-        addBorderStyle(to: [userNameTextField,
-                            emailTextfield,
-                            passwordTextfield], style: .none)
-        
-        func addcornerRadius(to multipleViews: [UIView], radius: CGFloat = 0) {
-            multipleViews.forEach { view in
-                view.addCornerRadius(radius)
-                view.addBorder(color: .borderGray)
-            }
-        }
-        
-        func addBorderStyle(to textfields: [UITextField], style: UITextField.BorderStyle) {
-            textfields.forEach { textfield in
-                textfield.borderStyle = style
-            }
-        }
+        Border.addBorderStyle(to: [userNameTextField,
+                                   emailTextfield,
+                                   passwordTextfield], style: .none)
     }
     
 }
