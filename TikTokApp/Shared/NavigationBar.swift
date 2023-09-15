@@ -13,4 +13,12 @@ public class NavigationBar {
         viewController.navigationItem.title = text
         viewController.navigationController?.navigationBar.prefersLargeTitles = true
     }
+
+    class func setBackIconButtonItem() {
+        UINavigationBar.appearance().tintColor = .backgroundBarAppearance
+        let backImage = TiktokImage.icNavigationBack.image
+        UINavigationBar.appearance().backIndicatorImage = backImage
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = backImage
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(.init(horizontal: -1000, vertical: 0), for: .default)
+    }
 }

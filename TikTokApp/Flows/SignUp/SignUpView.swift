@@ -36,6 +36,8 @@ private extension SignUpView {
     
     func setupUI() {
 
+        profileImageView.image = TiktokImage.profileImage.image
+
         Border.addcornerRadius(to: [usernameContainerView,
                                     emailContainerView,
                                     passwordContainerView,

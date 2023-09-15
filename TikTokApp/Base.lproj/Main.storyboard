@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tiktok_icon_welcomeView" translatesAutoresizingMaskIntoConstraints="NO" id="FwL-in-k5P">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FwL-in-k5P">
                                 <rect key="frame" x="96.666666666666686" y="123" width="200" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="1Fm-tT-3lf"/>
@@ -143,6 +143,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Dgx-gh-Y1q"/>
                     <connections>
+                        <outlet property="iconTiktokMain" destination="FwL-in-k5P" id="Y5W-7m-zIe"/>
                         <outlet property="loginEmailButton" destination="tkN-SW-EIO" id="fwf-mJ-RDd"/>
                         <outlet property="loginFacebookButton" destination="Qy7-gf-qx5" id="xZf-KS-y5X"/>
                         <outlet property="loginGoogleButton" destination="Gyn-Pv-R4g" id="eFL-5h-j1W"/>
@@ -161,7 +162,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image_signUpView" translatesAutoresizingMaskIntoConstraints="NO" id="KC8-RX-T0a">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KC8-RX-T0a">
                                 <rect key="frame" x="136.66666666666666" y="109" width="119.99999999999997" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="BrP-QX-RB5"/>
@@ -272,10 +273,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBL-Ch-mbI">
-                                <rect key="frame" x="25" y="119" width="343" height="49"/>
+                                <rect key="frame" x="25" y="119" width="343" height="35"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M6y-92-f7Q">
-                                        <rect key="frame" x="15" y="2.6666666666666714" width="323" height="44"/>
+                                        <rect key="frame" x="15" y="2.6666666666666714" width="323" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -283,14 +284,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="M6y-92-f7Q" firstAttribute="leading" secondItem="MBL-Ch-mbI" secondAttribute="leading" constant="15" id="1Jf-Nl-WZQ"/>
-                                    <constraint firstAttribute="height" constant="49" id="7EM-uE-43E"/>
+                                    <constraint firstAttribute="height" constant="35" id="7EM-uE-43E"/>
                                     <constraint firstItem="M6y-92-f7Q" firstAttribute="top" secondItem="MBL-Ch-mbI" secondAttribute="top" constant="2.5" id="LBA-u5-JFJ"/>
                                     <constraint firstAttribute="bottom" secondItem="M6y-92-f7Q" secondAttribute="bottom" constant="2.5" id="LrM-0O-Oyt"/>
                                     <constraint firstAttribute="trailing" secondItem="M6y-92-f7Q" secondAttribute="trailing" constant="5" id="OTJ-HG-Pxg"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FND-zt-CiY">
-                                <rect key="frame" x="25" y="188" width="343" height="40"/>
+                                <rect key="frame" x="25" y="174" width="343" height="40"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GFT-tS-dPP">
                                         <rect key="frame" x="15" y="2.6666666666666572" width="323" height="35"/>
@@ -308,7 +309,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RF3-eC-Nj5">
-                                <rect key="frame" x="60" y="268" width="273" height="35"/>
+                                <rect key="frame" x="60" y="254" width="273" height="35"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="zD4-3S-Hjo"/>
@@ -336,6 +337,7 @@
                     </view>
                     <connections>
                         <outlet property="emailContainerView" destination="MBL-Ch-mbI" id="kDo-S9-RRd"/>
+                        <outlet property="emailTextfield" destination="M6y-92-f7Q" id="2Bw-PY-gcS"/>
                         <outlet property="passwordContainerView" destination="FND-zt-CiY" id="ULi-4R-kDn"/>
                         <outlet property="passwordTextfield" destination="GFT-tS-dPP" id="YxP-22-Q59"/>
                         <outlet property="signInButton" destination="RF3-eC-Nj5" id="tPa-fC-Ycp"/>
@@ -365,8 +367,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="profile_image_signUpView" width="640" height="427"/>
-        <image name="tiktok_icon_welcomeView" width="2000" height="1125"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

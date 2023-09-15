@@ -9,16 +9,8 @@ import UIKit
 
 extension UIColor {
     
-    public class var jaguar: UIColor {
-        return UIColor(red: 0.16, green: 0.16, blue: 0.19, alpha: 1.00)
-    }
-    
-    public class var persianPink: UIColor {
-        return UIColor(red: 1.00, green: 0.48, blue: 0.70, alpha: 1.00)
-    }
-    
-    public class var corn: UIColor {
-        return UIColor(red: 0.94, green: 0.72, blue: 0.01, alpha: 1.00)
+    public class var backgroundBarAppearance: UIColor {
+        return UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
     }
     
 }

@@ -20,15 +20,21 @@ class SignInView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NavigationBar.setLargeTitle(with: "Sign In", in: self)
+        setupUI()
     }
 
 }
 
 //MARK: SIGN UP - UI
-private extension SignUpView {
+private extension SignInView {
     
     func setupUI() {
-        
+        Border.addcornerRadius(to: [emailContainerView,
+                                    passwordContainerView,
+                                    signInButton], radius: 20)
+                
+        Border.addBorderStyle(to: [emailTextfield,
+                                   passwordTextfield], style: .none)
     }
     
 }

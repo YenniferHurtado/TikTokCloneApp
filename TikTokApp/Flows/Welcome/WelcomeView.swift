@@ -9,6 +9,7 @@ import UIKit
 
 class WelcomeView: UIViewController {
 
+    @IBOutlet weak var iconTiktokMain: UIImageView!
     @IBOutlet weak var signUpEmailButton: UIButton!
     @IBOutlet weak var loginFacebookButton: UIButton!
     @IBOutlet weak var loginGoogleButton: UIButton!
@@ -20,12 +21,19 @@ class WelcomeView: UIViewController {
         super.viewDidLoad()
         setupUI()
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     func setupUI() {
         Border.addcornerRadius(to: [signUpEmailButton,
                                     loginFacebookButton,
                                     loginGoogleButton,
                                     loginEmailButton], radius: 18)
+        iconTiktokMain.image = TiktokImage.icTikTokMain.image
+        
     }
 
     @IBAction func signUpEmailDidTapped(_ sender: Any) {
