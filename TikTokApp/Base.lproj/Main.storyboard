@@ -272,31 +272,74 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBL-Ch-mbI">
-                                <rect key="frame" x="20" y="119" width="353" height="49"/>
+                                <rect key="frame" x="25" y="119" width="343" height="49"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M6y-92-f7Q">
+                                        <rect key="frame" x="15" y="2.6666666666666714" width="323" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="M6y-92-f7Q" firstAttribute="leading" secondItem="MBL-Ch-mbI" secondAttribute="leading" constant="15" id="1Jf-Nl-WZQ"/>
                                     <constraint firstAttribute="height" constant="49" id="7EM-uE-43E"/>
+                                    <constraint firstItem="M6y-92-f7Q" firstAttribute="top" secondItem="MBL-Ch-mbI" secondAttribute="top" constant="2.5" id="LBA-u5-JFJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="M6y-92-f7Q" secondAttribute="bottom" constant="2.5" id="LrM-0O-Oyt"/>
+                                    <constraint firstAttribute="trailing" secondItem="M6y-92-f7Q" secondAttribute="trailing" constant="5" id="OTJ-HG-Pxg"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FND-zt-CiY">
-                                <rect key="frame" x="20" y="188" width="353" height="40"/>
+                                <rect key="frame" x="25" y="188" width="343" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GFT-tS-dPP">
+                                        <rect key="frame" x="15" y="2.6666666666666572" width="323" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="GFT-tS-dPP" firstAttribute="leading" secondItem="FND-zt-CiY" secondAttribute="leading" constant="15" id="exM-7A-MWg"/>
                                     <constraint firstAttribute="height" constant="40" id="f1f-x5-Tr9"/>
+                                    <constraint firstItem="GFT-tS-dPP" firstAttribute="top" secondItem="FND-zt-CiY" secondAttribute="top" constant="2.5" id="hT3-a2-Gjg"/>
+                                    <constraint firstAttribute="trailing" secondItem="GFT-tS-dPP" secondAttribute="trailing" constant="5" id="olP-UV-VNb"/>
+                                    <constraint firstAttribute="bottom" secondItem="GFT-tS-dPP" secondAttribute="bottom" constant="2.5" id="p4Z-uH-WYE"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RF3-eC-Nj5">
+                                <rect key="frame" x="60" y="268" width="273" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="zD4-3S-Hjo"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign In">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yzQ-Te-xGQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yzQ-Te-xGQ" firstAttribute="trailing" secondItem="MBL-Ch-mbI" secondAttribute="trailing" constant="20" id="D0t-1O-SO8"/>
-                            <constraint firstItem="yzQ-Te-xGQ" firstAttribute="trailing" secondItem="FND-zt-CiY" secondAttribute="trailing" constant="20" id="Eaq-7p-5mc"/>
-                            <constraint firstItem="MBL-Ch-mbI" firstAttribute="leading" secondItem="yzQ-Te-xGQ" secondAttribute="leading" constant="20" id="Fxd-eo-pSI"/>
-                            <constraint firstItem="FND-zt-CiY" firstAttribute="leading" secondItem="yzQ-Te-xGQ" secondAttribute="leading" constant="20" id="eqG-Ez-8dx"/>
+                            <constraint firstItem="yzQ-Te-xGQ" firstAttribute="trailing" secondItem="MBL-Ch-mbI" secondAttribute="trailing" constant="25" id="D0t-1O-SO8"/>
+                            <constraint firstItem="yzQ-Te-xGQ" firstAttribute="trailing" secondItem="RF3-eC-Nj5" secondAttribute="trailing" constant="60" id="D3Q-pZ-VOx"/>
+                            <constraint firstItem="yzQ-Te-xGQ" firstAttribute="trailing" secondItem="FND-zt-CiY" secondAttribute="trailing" constant="25" id="Eaq-7p-5mc"/>
+                            <constraint firstItem="MBL-Ch-mbI" firstAttribute="leading" secondItem="yzQ-Te-xGQ" secondAttribute="leading" constant="25" id="Fxd-eo-pSI"/>
+                            <constraint firstItem="RF3-eC-Nj5" firstAttribute="leading" secondItem="yzQ-Te-xGQ" secondAttribute="leading" constant="60" id="WZS-Wd-oHW"/>
+                            <constraint firstItem="RF3-eC-Nj5" firstAttribute="top" secondItem="FND-zt-CiY" secondAttribute="bottom" constant="40" id="bW1-3H-xt2"/>
+                            <constraint firstItem="FND-zt-CiY" firstAttribute="leading" secondItem="yzQ-Te-xGQ" secondAttribute="leading" constant="25" id="eqG-Ez-8dx"/>
                             <constraint firstItem="MBL-Ch-mbI" firstAttribute="top" secondItem="yzQ-Te-xGQ" secondAttribute="top" constant="60" id="rOS-Kb-wgU"/>
                             <constraint firstItem="FND-zt-CiY" firstAttribute="top" secondItem="MBL-Ch-mbI" secondAttribute="bottom" constant="20" id="yBC-RX-4kO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailContainerView" destination="MBL-Ch-mbI" id="kDo-S9-RRd"/>
+                        <outlet property="passwordContainerView" destination="FND-zt-CiY" id="ULi-4R-kDn"/>
+                        <outlet property="passwordTextfield" destination="GFT-tS-dPP" id="YxP-22-Q59"/>
+                        <outlet property="signInButton" destination="RF3-eC-Nj5" id="tPa-fC-Ycp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXG-Zd-MAU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

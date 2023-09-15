@@ -26,18 +26,13 @@ class SignUpView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavigationBar()
+        NavigationBar.setLargeTitle(with: "Create new Account", in: self)
         setupUI()
     }
 }
 
 //MARK: SIGN UP - UI
 private extension SignUpView {
-    
-    func setNavigationBar() {
-        navigationItem.title = "Create new Account"
-        navigationController?.navigationBar.prefersLargeTitles = true
-    }
     
     func setupUI() {
 
