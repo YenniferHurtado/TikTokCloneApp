@@ -24,6 +24,7 @@
 		CE174E782AB109B60021BD9D /* UINavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E772AB109B60021BD9D /* UINavigation.swift */; };
 		CE174E7C2AB10CA00021BD9D /* ViewsID.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E7B2AB10CA00021BD9D /* ViewsID.swift */; };
 		CE174E8A2AB22A460021BD9D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E892AB22A460021BD9D /* Colors.swift */; };
+		CE3380D92AB504E400006C92 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3380D82AB504E400006C92 /* SignUpViewModel.swift */; };
 		CE91F5DD2AB3992300B34E37 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91F5DC2AB3992200B34E37 /* SignInView.swift */; };
 		CE91F5E02AB3C32E00B34E37 /* Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91F5DF2AB3C32E00B34E37 /* Border.swift */; };
 		CE91F5E42AB3CFD700B34E37 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91F5E32AB3CFD700B34E37 /* NavigationBar.swift */; };
@@ -51,6 +52,7 @@
 		CE174E7B2AB10CA00021BD9D /* ViewsID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsID.swift; sourceTree = "<group>"; };
 		CE174E7D2AB121380021BD9D /* TikTokAppRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TikTokAppRelease.entitlements; sourceTree = "<group>"; };
 		CE174E892AB22A460021BD9D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CE3380D82AB504E400006C92 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		CE91F5DC2AB3992200B34E37 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		CE91F5DF2AB3C32E00B34E37 /* Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Border.swift; sourceTree = "<group>"; };
 		CE91F5E32AB3CFD700B34E37 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				CE174E4A2A9D6D3F0021BD9D /* SignUpView.swift */,
+				CE3380D82AB504E400006C92 /* SignUpViewModel.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE174E4B2A9D6D3F0021BD9D /* SignUpView.swift in Sources */,
+				CE3380D92AB504E400006C92 /* SignUpViewModel.swift in Sources */,
 				CE174E8A2AB22A460021BD9D /* Colors.swift in Sources */,
 				CE174E262A9D0B750021BD9D /* UIView.swift in Sources */,
 				CE174E412A9D5CA30021BD9D /* WelcomeViewModel.swift in Sources */,
