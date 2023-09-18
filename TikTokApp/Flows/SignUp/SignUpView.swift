@@ -25,7 +25,7 @@ class SignUpView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NavigationBar.setLargeTitle(with: "Create new Account", in: self)
-        setupUI()
+        customizeUIView()
     }
     
     @IBAction func signUpButtonDidTapper(_ sender: Any) {
@@ -41,18 +41,34 @@ class SignUpView: UIViewController {
 //MARK: SIGN UP - UI
 private extension SignUpView {
     
-    func setupUI() {
+    func customizeUIView() {
+                
+        Border.applyBorderAndCornerRadius(to: [usernameContainerView,
+                                               emailContainerView,
+                                               passwordContainerView,
+                                               signUpButton], radius: 20, borderColor: .borderGray)
         
+        Border.applyBorderStyleToTextFields( [userNameTextField,
+                                              emailTextfield,
+                                              passwordTextfield], style: .none)
+        
+        customizeProfileImageView()
+    }
+    
+    
+    
+    func customizeProfileImageView() {
+        profileImageView.applyCornerRadius(60)
         profileImageView.image = TiktokImage.profileImage.image
-        Border.addcornerRadius(to: [usernameContainerView,
-                                    emailContainerView,
-                                    passwordContainerView,
-                                    signUpButton], radius: 20)
+        profileImageView.clipsToBounds = true
+        profileImageView.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self,
+                                                action: #selector(presentPickVC))
+        profileImageView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func presentPickVC() {
         
-        Border.addcornerRadius(to: [profileImageView], radius: 60)
-        Border.addBorderStyle(to: [userNameTextField,
-                                   emailTextfield,
-                                   passwordTextfield], style: .none)
     }
     
 }

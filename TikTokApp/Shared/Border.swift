@@ -9,15 +9,15 @@ import UIKit
 
 public class Border {
     
-    class func addcornerRadius(to multipleViews: [UIView], radius: CGFloat = 0) {
-        multipleViews.forEach { view in
-            view.addCornerRadius(radius)
-            view.addBorder(color: .borderGray)
+    class func applyBorderAndCornerRadius(to views : [UIView], radius: CGFloat, borderColor: CGColor) {
+        views.forEach { view in
+            view.applyBorderStyle(color: borderColor)
+            view.applyCornerRadius(radius)
         }
     }
     
-    class func addBorderStyle(to textfields: [UITextField], style: UITextField.BorderStyle) {
-        textfields.forEach { textfield in
+    class func applyBorderStyleToTextFields(_ arrayTextfields: [UITextField], style: UITextField.BorderStyle) {
+        arrayTextfields.forEach { textfield in
             textfield.borderStyle = style
         }
     }
