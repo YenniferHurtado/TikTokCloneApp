@@ -38,7 +38,7 @@ class SignUpView: UIViewController {
     
 }
 
-//MARK: SIGN UP - UI
+//MARK: UI CUSTOMIZE
 private extension SignUpView {
     
     func customizeUIView() {

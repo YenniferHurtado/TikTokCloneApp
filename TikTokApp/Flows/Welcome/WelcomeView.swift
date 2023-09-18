@@ -19,7 +19,7 @@ class WelcomeView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        customizeUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -27,20 +27,20 @@ class WelcomeView: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
-    func setupUI() {
-        Border.addcornerRadius(to: [signUpEmailButton,
-                                    loginFacebookButton,
-                                    loginGoogleButton,
-                                    loginEmailButton], radius: 18)
-        iconTiktokMain.image = TiktokImage.icTikTokMain.image
+    func customizeUI() {
         
+        iconTiktokMain.image = TiktokImage.icTikTokMain.image
+        Border.applyBorderAndCornerRadius(to: [signUpEmailButton,
+                                               loginFacebookButton,
+                                               loginGoogleButton,
+                                               loginEmailButton], radius: 20, borderColor: .borderGray)
     }
 
     @IBAction func signUpEmailDidTapped(_ sender: Any) {
         navigationController?.pushViewController(to: SignUpView(), id: .signUpView)
     }
     @IBAction func loginEmailButtonDidTapped(_ sender: Any) {
-        navigationController?.pushViewController(to: SignUpView(), id: .signInView)
+        navigationController?.pushViewController(to: SignInView(), id: .signInView)
 
     }
 }
