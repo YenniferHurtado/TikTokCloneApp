@@ -21,6 +21,8 @@ class SignUpView: UIViewController {
     @IBOutlet weak var passwordContainerView: UIView!
     @IBOutlet weak var signUpButton: UIButton!
     
+    var image: UIImage? = nil
+    
     let viewModel = SignUpViewModel()
     
     override func viewDidLoad() {
@@ -32,7 +34,7 @@ class SignUpView: UIViewController {
     @IBAction func signUpButtonDidTapper(_ sender: Any) {
         guard let email = emailTextfield.text else { return }
         guard let password = passwordTextfield.text else { return }
-        viewModel.createNewAccount(with: email, and: password)
+        viewModel.createNewAccount(with: email, and: password, imageData: self.image)
     }
     
 }
@@ -73,6 +75,7 @@ extension SignUpView: PHPickerViewControllerDelegate {
                 if let imageSelected = image as? UIImage {
                     DispatchQueue.main.sync {
                         self.profileImageView.image = imageSelected
+                        self.image = imageSelected
                     }
                 }
             }
