@@ -1,5 +1,5 @@
 //
-//  TiktokImage.swift
+//  Images.swift
 //  TikTokApp
 //
 //  Created by Yennifer Hurtado Arce on 15/09/23.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-public enum TiktokImage: String {
+public enum Images: String {
             
     // MARK: SignUp
-    case profileImage = "profile_image"
+    case profile_signup = "profile_signup"
 
     // MARK: ICONS
     case icNavigationBack = "ic_navigation_back"
-    case icTikTokMain = "ic_tiktok_main"
+    case icMain = "ic_main"
 
     
     public var image: UIImage? {

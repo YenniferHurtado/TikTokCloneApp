@@ -11,23 +11,28 @@ import FirebaseStorage
 
 class SignUpViewModel {
     
-    func createNewAccount(with email: String, and password: String, imageData: UIImage?) {
+    var username: String?
+    var email: String?
+    var password: String?
+    var profileImage: UIImage?
+    
+    func createNewAccount() {
         
-        guard let imageData = imageData else {
+        guard let imageSelected = profileImage else {
             print("Profile image is nil")
             return
         }
         
-        guard let imageData = imageData.jpegData(compressionQuality: 0.4) else { return }
+        guard let imageData = imageSelected.jpegData(compressionQuality: 0.4) else { return }
         
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, err in
+        Auth.auth().createUser(withEmail: self.email ?? "", password: self.password ?? "") { auth, err in
+            
             if err != nil {
                 print(err!.localizedDescription)
                 return
             }
             
-            if let auth = authResult {
-                print(auth.user.email!)
+            if let auth = auth {
                 
                 var dictUser: Dictionary<String, Any> = [
                     "uid": auth.user.uid,
@@ -36,12 +41,14 @@ class SignUpViewModel {
                     "status": ""
                 ]
                 
-                //Storage
                 let storageRef = Storage.storage().reference(forURL: "gs://tiktokclone-app.appspot.com")
                 let storageProfileRef = storageRef.child("profile").child(auth.user.uid)
+                
                 let metaData = StorageMetadata()
                 metaData.contentType = "image/jpg"
+                
                 storageProfileRef.putData(imageData, metadata: metaData) { storageMetaData, error in
+                    
                     if error != nil {
                         print(error!.localizedDescription)
                         return

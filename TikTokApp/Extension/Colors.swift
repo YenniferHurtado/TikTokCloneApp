@@ -17,7 +17,7 @@ extension UIColor {
 
 extension CGColor {
     
-    public class var borderGray: CGColor {
+    public class var gray: CGColor {
         return CGColor(red: 217/255, green: 217/255, blue: 217/255, alpha: 0.8)
     }
 }

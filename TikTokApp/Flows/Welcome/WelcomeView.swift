@@ -16,6 +16,7 @@ class WelcomeView: UIViewController {
     @IBOutlet weak var loginEmailButton: UIButton!
     
     let viewModel = WelcomeViewModel()
+    let viewStyler = ViewStyler()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +30,10 @@ class WelcomeView: UIViewController {
     
     func customizeUI() {
         
-        iconTiktokMain.image = TiktokImage.icTikTokMain.image
-        Border.applyBorderAndCornerRadius(to: [signUpEmailButton,
-                                               loginFacebookButton,
-                                               loginGoogleButton,
-                                               loginEmailButton], radius: 20, borderColor: .borderGray)
+        iconTiktokMain.image = Images.icMain.image
+        viewStyler.applyBorderAndCornerRadius(to:
+                                                [signUpEmailButton, loginFacebookButton, loginGoogleButton, loginEmailButton],
+                                              radius: 20, borderColor: .gray)
     }
 
     @IBAction func signUpEmailDidTapped(_ sender: Any) {
@@ -41,7 +41,6 @@ class WelcomeView: UIViewController {
     }
     @IBAction func loginEmailButtonDidTapped(_ sender: Any) {
         navigationController?.pushViewController(to: SignInView(), id: .signInView)
-
     }
 }
 
