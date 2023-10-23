@@ -31,6 +31,8 @@
 		CE7321702ADF28C2003B82BE /* SignUpViewPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73216F2ADF28C2003B82BE /* SignUpViewPicker.swift */; };
 		CE7321722AE06490003B82BE /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7321712AE06490003B82BE /* Alert.swift */; };
 		CE91F5DD2AB3992300B34E37 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91F5DC2AB3992200B34E37 /* SignInView.swift */; };
+		CE937FD42AE6C2BB00AC75EC /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE937FD32AE6C2BB00AC75EC /* Localizable.swift */; };
+		CE937FD72AE6C61300AC75EC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE937FD92AE6C61300AC75EC /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,9 @@
 		CE73216F2ADF28C2003B82BE /* SignUpViewPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewPicker.swift; sourceTree = "<group>"; };
 		CE7321712AE06490003B82BE /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		CE91F5DC2AB3992200B34E37 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		CE937FD32AE6C2BB00AC75EC /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		CE937FD82AE6C61300AC75EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE937FDA2AE6C62E00AC75EC /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		F848B3DF0604C454684C7801 /* Pods-TikTokApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokApp.release.xcconfig"; path = "Target Support Files/Pods-TikTokApp/Pods-TikTokApp.release.xcconfig"; sourceTree = "<group>"; };
 		FD61022BA75E815775E522AF /* Pods_TikTokApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -145,6 +150,7 @@
 		CE174E222A9D0B210021BD9D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CE937FD22AE6C29100AC75EC /* Localizables */,
 				CE174E302A9D0BD20021BD9D /* Alert */,
 				CE174E312A9D0BD60021BD9D /* Environment */,
 				CE174E2E2A9D0BC20021BD9D /* BaseClasses */,
@@ -247,6 +253,15 @@
 			path = SignIn;
 			sourceTree = "<group>";
 		};
+		CE937FD22AE6C29100AC75EC /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				CE937FD32AE6C2BB00AC75EC /* Localizable.swift */,
+				CE937FD92AE6C61300AC75EC /* Localizable.strings */,
+			);
+			path = Localizables;
+			sourceTree = "<group>";
+		};
 		F2AABD33D66B8708C0DBB8C6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +315,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
 			);
 			mainGroup = CE174E002A9D03980021BD9D;
 			productRefGroup = CE174E0A2A9D03990021BD9D /* Products */;
@@ -316,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE937FD72AE6C61300AC75EC /* Localizable.strings in Resources */,
 				CE174E192A9D03990021BD9D /* LaunchScreen.storyboard in Resources */,
 				CE174E162A9D03990021BD9D /* Assets.xcassets in Resources */,
 				CE174E142A9D03990021BD9D /* Main.storyboard in Resources */,
@@ -382,6 +399,7 @@
 				CE174E2D2A9D0BB70021BD9D /* Feed.swift in Sources */,
 				CE91F5DD2AB3992300B34E37 /* SignInView.swift in Sources */,
 				CE174E3F2A9D5C950021BD9D /* WelcomeModel.swift in Sources */,
+				CE937FD42AE6C2BB00AC75EC /* Localizable.swift in Sources */,
 				CE174E112A9D03990021BD9D /* WelcomeView.swift in Sources */,
 				CE3381252AD83A0A00006C92 /* ViewStyler.swift in Sources */,
 				CE174E0D2A9D03990021BD9D /* AppDelegate.swift in Sources */,
@@ -413,6 +431,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		CE937FD92AE6C61300AC75EC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE937FD82AE6C61300AC75EC /* en */,
+				CE937FDA2AE6C62E00AC75EC /* es-419 */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -420,6 +447,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -480,6 +508,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

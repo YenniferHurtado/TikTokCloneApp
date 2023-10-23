@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  TikTokApp
+
+  Created by Yennifer Hurtado Arce on 23/10/23.
+  
+*/
+
+"Localizable.signUp_title" = "Create new account";
+"Localizable.signUp_errorAlertUsername" = "Ingresa un nombre de usuario";
+"Localizable.signUp_errorAlertEmail" = "Ingresa un email";
+"Localizable.signUp_errorAlertPassword" = "Ingresa un password";

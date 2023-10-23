@@ -29,7 +29,7 @@ class SignUpView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NavigationItem.setLargeTitle(with: "Create new Account", in: self)
+        NavigationItem.setLargeTitle(with: Localizable.signUp_title.localized, in: self)
         customizeUI()
     }
     
@@ -62,11 +62,11 @@ private extension SignUpView {
     func showErrorMessage(type: UserInputType) {
         switch type {
         case .username:
-            Alert.showErrorAlert(on: self, message: "Ingresa un username")
+            Alert.showErrorAlert(on: self, message: Localizable.signUp_errorAlertUsername.localized)
         case .email:
-            Alert.showErrorAlert(on: self, message: "Ingresa un email")
+            Alert.showErrorAlert(on: self, message: Localizable.signUp_errorAlertEmail.localized)
         case .password:
-            Alert.showErrorAlert(on: self, message: "Ingresa un password")
+            Alert.showErrorAlert(on: self, message: Localizable.signUp_errorAlertPassword.localized)
         }
     }
 }
@@ -86,7 +86,7 @@ private extension SignUpView {
     
     func customizeProfileImageView() {
         profileImageView.applyCornerRadius(60)
-        profileImageView.applyBorderStyle(2, color: CGC)
+        profileImageView.applyBorderStyle(2, color: .gray)
         profileImageView.image = Images.profile_signup.image
         profileImageView.clipsToBounds = true
         profileImageView.isUserInteractionEnabled = true
