@@ -8,11 +8,13 @@
 import UIKit
 import PhotosUI
 
+enum UserInputType {
+    case username, password, email
+}
+
 class SignUpView: UIViewController {
 
     @IBOutlet weak var profileImageView: UIImageView!
-    
-    //MARK: IBOulets
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
@@ -20,9 +22,7 @@ class SignUpView: UIViewController {
     @IBOutlet weak var emailContainerView: UIView!
     @IBOutlet weak var passwordContainerView: UIView!
     @IBOutlet weak var signUpButton: UIButton!
-    
-    var avatar: UIImage? = nil
-    
+        
     let viewModel = SignUpViewModel()
     let viewStyler = ViewStyler()
     
@@ -33,17 +33,45 @@ class SignUpView: UIViewController {
     }
     
     @IBAction func signUpButtonDidTapper(_ sender: Any) {
-        captureInputDataFromUser()
-        viewModel.createNewAccount()
-    }
-
-    func captureInputDataFromUser() {
-        viewModel.username = userNameTextField.text
-        viewModel.email = emailTextfield.text
-        viewModel.password = passwordTextfield.text
-        viewModel.profileImage = self.avatar
+        submitRegistrationForm()
     }
 }
+
+//MARK: FUNCTIONS
+private extension SignUpView {
+    
+    func submitRegistrationForm() {
+        
+        _ = checkEmptyTextField(emailTextfield, type: .email)
+        
+        if let username = checkEmptyTextField(userNameTextField, type: .username),
+            let password = checkEmptyTextField(passwordTextfield, type: .password) {
+            
+            viewModel.createNewAccount(email: username, password: password, avatar: profileImageView.image ?? UIImage())
+        }
+    }
+    
+    func checkEmptyTextField(_ textfield: UITextField, type: UserInputType) -> String? {
+        if let texfield = textfield.text, texfield.isEmpty {
+            showErrorMessage(type: type)
+        }
+        
+        return textfield.text
+    }
+    
+    func showErrorMessage(type: UserInputType) {
+        switch type {
+        case .username:
+            Alert.showErrorAlert(on: self, message: "Ingresa un username")
+        case .email:
+            Alert.showErrorAlert(on: self, message: "Ingresa un email")
+        case .password:
+            Alert.showErrorAlert(on: self, message: "Ingresa un password")
+        }
+    }
+}
+
+
 
 //MARK: UI CUSTOMIZE
 private extension SignUpView {

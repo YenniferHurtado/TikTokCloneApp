@@ -23,11 +23,6 @@ class WelcomeView: UIViewController {
         customizeUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
-    
     func customizeUI() {
         
         iconTiktokMain.image = Images.icMain.image

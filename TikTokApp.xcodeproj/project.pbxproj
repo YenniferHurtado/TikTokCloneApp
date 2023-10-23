@@ -29,6 +29,7 @@
 		CE3381232AD8394200006C92 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3381222AD8394200006C92 /* Images.swift */; };
 		CE3381252AD83A0A00006C92 /* ViewStyler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3381242AD83A0A00006C92 /* ViewStyler.swift */; };
 		CE7321702ADF28C2003B82BE /* SignUpViewPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73216F2ADF28C2003B82BE /* SignUpViewPicker.swift */; };
+		CE7321722AE06490003B82BE /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7321712AE06490003B82BE /* Alert.swift */; };
 		CE91F5DD2AB3992300B34E37 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91F5DC2AB3992200B34E37 /* SignInView.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		CE3381222AD8394200006C92 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		CE3381242AD83A0A00006C92 /* ViewStyler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyler.swift; sourceTree = "<group>"; };
 		CE73216F2ADF28C2003B82BE /* SignUpViewPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewPicker.swift; sourceTree = "<group>"; };
+		CE7321712AE06490003B82BE /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		CE91F5DC2AB3992200B34E37 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		F848B3DF0604C454684C7801 /* Pods-TikTokApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokApp.release.xcconfig"; path = "Target Support Files/Pods-TikTokApp/Pods-TikTokApp.release.xcconfig"; sourceTree = "<group>"; };
 		FD61022BA75E815775E522AF /* Pods_TikTokApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +197,7 @@
 		CE174E302A9D0BD20021BD9D /* Alert */ = {
 			isa = PBXGroup;
 			children = (
+				CE7321712AE06490003B82BE /* Alert.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				CE3380D92AB504E400006C92 /* SignUpViewModel.swift in Sources */,
 				CE174E8A2AB22A460021BD9D /* Colors.swift in Sources */,
 				CE174E262A9D0B750021BD9D /* UIView.swift in Sources */,
+				CE7321722AE06490003B82BE /* Alert.swift in Sources */,
 				CE174E412A9D5CA30021BD9D /* WelcomeViewModel.swift in Sources */,
 				CE174E2D2A9D0BB70021BD9D /* Feed.swift in Sources */,
 				CE91F5DD2AB3992300B34E37 /* SignInView.swift in Sources */,
