@@ -25,6 +25,7 @@ class SignUpView: UIViewController {
         
     let viewModel = SignUpViewModel()
     let viewStyler = ViewStyler()
+    var avatar: UIImage? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +42,12 @@ class SignUpView: UIViewController {
 private extension SignUpView {
     
     func submitRegistrationForm() {
-        
-        _ = checkEmptyTextField(emailTextfield, type: .email)
-        
-        if let username = checkEmptyTextField(userNameTextField, type: .username),
-            let password = checkEmptyTextField(passwordTextfield, type: .password) {
+        if let _ = checkEmptyTextField(userNameTextField, type: .username),
+           let email = checkEmptyTextField(emailTextfield, type: .email),
+           let password = checkEmptyTextField(passwordTextfield, type: .password) {
             
-            viewModel.createNewAccount(email: username, password: password, avatar: profileImageView.image ?? UIImage())
+            viewModel.createNewAccount(email: email, password: password)
+            self.avatar = viewModel.pickerImage
         }
     }
     
@@ -86,6 +86,7 @@ private extension SignUpView {
     
     func customizeProfileImageView() {
         profileImageView.applyCornerRadius(60)
+        profileImageView.applyBorderStyle(2, color: CGC)
         profileImageView.image = Images.profile_signup.image
         profileImageView.clipsToBounds = true
         profileImageView.isUserInteractionEnabled = true
