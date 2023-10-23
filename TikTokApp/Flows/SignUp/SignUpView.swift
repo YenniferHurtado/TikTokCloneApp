@@ -31,6 +31,7 @@ class SignUpView: UIViewController {
         super.viewDidLoad()
         NavigationItem.setLargeTitle(with: Localizable.signUp_title.localized, in: self)
         customizeUI()
+        customizeProfileImageView()
     }
     
     @IBAction func signUpButtonDidTapper(_ sender: Any) {
@@ -42,16 +43,23 @@ class SignUpView: UIViewController {
 private extension SignUpView {
     
     func submitRegistrationForm() {
-        if let _ = checkEmptyTextField(userNameTextField, type: .username),
-           let email = checkEmptyTextField(emailTextfield, type: .email),
-           let password = checkEmptyTextField(passwordTextfield, type: .password) {
+        
+        let username = checkEmpty(textfield: userNameTextField, type: .username)
+        let email = checkEmpty(textfield: emailTextfield, type: .email)
+        let password = checkEmpty(textfield: passwordTextfield, type: .password)
+
+        if let username, let email, let password {
             
-            viewModel.createNewAccount(email: email, password: password)
-            self.avatar = viewModel.pickerImage
+            guard let avatar = self.avatar else {
+                Alert.showErrorAlert(on: self, message: Localizable.signUp_errorAlertImage.localized)
+                return
+            }
+            
+            viewModel.createNewAccount(email: email, password: password, username: username, avatar: avatar)
         }
     }
     
-    func checkEmptyTextField(_ textfield: UITextField, type: UserInputType) -> String? {
+    func checkEmpty(textfield: UITextField, type: UserInputType) -> String? {
         if let texfield = textfield.text, texfield.isEmpty {
             showErrorMessage(type: type)
         }
@@ -77,17 +85,15 @@ private extension SignUpView {
 private extension SignUpView {
     
     func customizeUI() {
-        customizeProfileImageView()
-        viewStyler.applyBorderAndCornerRadius(to:
-                                                [usernameContainerView, emailContainerView, passwordContainerView, signUpButton],
+        viewStyler.applyBorderAndCornerRadius(to: [usernameContainerView, emailContainerView, passwordContainerView, signUpButton],
                                               radius: 20, borderColor: .gray)
+        
         viewStyler.applyBorderStyleToTextFields([userNameTextField, emailTextfield, passwordTextfield], style: .none)
     }
     
     func customizeProfileImageView() {
         profileImageView.applyCornerRadius(60)
         profileImageView.applyBorderStyle(2, color: .gray)
-        profileImageView.image = Images.profile_signup.image
         profileImageView.clipsToBounds = true
         profileImageView.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(presentPickVC))

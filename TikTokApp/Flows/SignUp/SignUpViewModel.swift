@@ -13,7 +13,7 @@ class SignUpViewModel {
     
     let pickerImage: UIImage? = nil
     
-    func createNewAccount(email: String, password: String) {
+    func createNewAccount(email: String, password: String, username: String, avatar: UIImage) {
         
         Auth.auth().createUser(withEmail: email, password: password) { auth, err in
             
@@ -27,18 +27,14 @@ class SignUpViewModel {
                 var dictUser: Dictionary<String, Any> = [
                     "uid": auth.user.uid,
                     "email": auth.user.email ?? "",
+                    "username": username,
                     "profileImageUrl": "",
                     "status": ""
                 ]
                 
-                guard let pickerImage = self.pickerImage else {
-                    Alert.showErrorAlert(on: SignUpView(), message: "Ingresar avatar")
-                    return
-                }
-                
                 let referenceToStorage = Storage.storage().reference(forURL: "gs://tiktokclone-app.appspot.com")
                 let refereceToProfileStorage = referenceToStorage.child("profile").child(auth.user.uid)
-                guard let avatarData = pickerImage.jpegData(compressionQuality: 0.4) else { return }
+                guard let avatarData = avatar.jpegData(compressionQuality: 0.4) else { return }
 
                 let metaData = StorageMetadata()
                 metaData.contentType = "image/jpg"

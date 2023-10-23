@@ -28,8 +28,7 @@ class SignInView: UIViewController {
 private extension SignInView {
     
     func customizeUI() {
-        viewStyler.applyBorderAndCornerRadius(to:
-                                                [emailContainerView, passwordContainerView, signInButton],
+        viewStyler.applyBorderAndCornerRadius(to: [emailContainerView, passwordContainerView, signInButton],
                                               radius: 20, borderColor: .gray)
         
         viewStyler.applyBorderStyleToTextFields([emailTextfield, passwordTextfield], style: .none)

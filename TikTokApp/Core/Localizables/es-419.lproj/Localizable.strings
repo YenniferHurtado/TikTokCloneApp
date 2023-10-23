@@ -6,4 +6,8 @@
   
 */
 
-"Localizable.signUp_title" = "Crea una cuenta";
+"Localizable.signUp_title" = "Crea una nueva cuenta";
+"Localizable.signUp_errorAlertUsername" = "Ingresa un nombre de usuario";
+"Localizable.signUp_errorAlertEmail" = "Ingresa un correo electrónico";
+"Localizable.signUp_errorAlertPassword" = "Ingresa un password";
+"Localizable.signUp_errorAlertPassword" = "Ingresa tu imagen de perfil";

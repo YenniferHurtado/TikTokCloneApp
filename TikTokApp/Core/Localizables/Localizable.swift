@@ -14,7 +14,8 @@ enum Localizable: String {
     case signUp_errorAlertUsername
     case signUp_errorAlertEmail
     case signUp_errorAlertPassword
-    
+    case signUp_errorAlertImage
+
     //MARK: SIGNIN
     
     var localized: String {
