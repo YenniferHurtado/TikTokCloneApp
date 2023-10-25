@@ -10,4 +10,4 @@
 "Localizable.signUp_errorAlertUsername" = "Please, enter a username";
 "Localizable.signUp_errorAlertEmail" = "Enter a email";
 "Localizable.signUp_errorAlertPassword" = "Enter a password";
-"Localizable.signUp_errorAlertPassword" = "Enter a image profile";
+"Localizable.signUp_errorAlertImage" = "Enter a image profile";

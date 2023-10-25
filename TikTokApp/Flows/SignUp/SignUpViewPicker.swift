@@ -16,7 +16,7 @@ extension SignUpView: PHPickerViewControllerDelegate {
                 if let imageSelected = image as? UIImage {
                     DispatchQueue.main.sync {
                         self.profileImageView.image = imageSelected
-                        self.avatar = imageSelected
+                        self.imgProfile = imageSelected
                     }
                 }
             }

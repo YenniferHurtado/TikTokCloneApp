@@ -26,9 +26,9 @@ struct Alert {
                        message: message, handler: handler)
     }
     
-    static func showEmptyAlert(on vc: UIViewController, handler: ((UIAlertAction) -> Void)? = nil) {
-        showBasicAlert(on: vc, with: "Localizable.HomeView.alertTitle.localized",
-                       message: "Localizable.HomeView.emptyResult.localized", handler: handler)
+    static func showEmptyAlert(on vc: UIViewController, title: String,
+                               message: String, handler: ((UIAlertAction) -> Void)? = nil) {
+        showBasicAlert(on: vc, with: title, message: message, handler: handler)
     }
 
 }

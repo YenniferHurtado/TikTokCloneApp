@@ -9,7 +9,7 @@ import UIKit
 import PhotosUI
 
 enum UserInputType {
-    case username, password, email
+    case username, password, email, avatar
 }
 
 class SignUpView: UIViewController {
@@ -25,13 +25,12 @@ class SignUpView: UIViewController {
         
     let viewModel = SignUpViewModel()
     let viewStyler = ViewStyler()
-    var avatar: UIImage? = nil
+    var imgProfile: UIImage? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NavigationItem.setLargeTitle(with: Localizable.signUp_title.localized, in: self)
         customizeUI()
-        customizeProfileImageView()
     }
     
     @IBAction func signUpButtonDidTapper(_ sender: Any) {
@@ -43,27 +42,33 @@ class SignUpView: UIViewController {
 private extension SignUpView {
     
     func submitRegistrationForm() {
-        
-        let username = checkEmpty(textfield: userNameTextField, type: .username)
-        let email = checkEmpty(textfield: emailTextfield, type: .email)
-        let password = checkEmpty(textfield: passwordTextfield, type: .password)
 
+        let username = validateTextfield(userNameTextField, type: .username)
+        let email = validateTextfield(emailTextfield, type: .email)
+        let password = validateTextfield(passwordTextfield, type: .password)
+        
         if let username, let email, let password {
-            
-            guard let avatar = self.avatar else {
-                Alert.showErrorAlert(on: self, message: Localizable.signUp_errorAlertImage.localized)
+            guard let imgProfile = self.imgProfile else {
+                showErrorMessage(type: .avatar)
                 return
             }
             
-            viewModel.createNewAccount(email: email, password: password, username: username, avatar: avatar)
+            view.indicatorStartAnimating()
+            
+            viewModel.signUp(with: email, password: password, username: username, imgProfile: imgProfile) { [view] in
+                view?.indicatorStopAnimating()
+                Alert.showErrorAlert(on: self, message: "EXITOSO")
+                //GO YO ANOTHER VIEW
+            } onError: { errorMessage in
+                Alert.showErrorAlert(on: self, message: errorMessage)
+            }
         }
     }
     
-    func checkEmpty(textfield: UITextField, type: UserInputType) -> String? {
+    func validateTextfield(_ textfield: UITextField, type: UserInputType) -> String? {
         if let texfield = textfield.text, texfield.isEmpty {
             showErrorMessage(type: type)
         }
-        
         return textfield.text
     }
     
@@ -75,6 +80,8 @@ private extension SignUpView {
             Alert.showErrorAlert(on: self, message: Localizable.signUp_errorAlertEmail.localized)
         case .password:
             Alert.showErrorAlert(on: self, message: Localizable.signUp_errorAlertPassword.localized)
+        case .avatar:
+            Alert.showErrorAlert(on: self, message: Localizable.signUp_errorAlertImage.localized)
         }
     }
 }
@@ -85,10 +92,12 @@ private extension SignUpView {
 private extension SignUpView {
     
     func customizeUI() {
-        viewStyler.applyBorderAndCornerRadius(to: [usernameContainerView, emailContainerView, passwordContainerView, signUpButton],
+        viewStyler.applyBorderAndCornerRadius(to: [usernameContainerView, emailContainerView,
+                                                   passwordContainerView, signUpButton],
                                               radius: 20, borderColor: .gray)
-        
-        viewStyler.applyBorderStyleToTextFields([userNameTextField, emailTextfield, passwordTextfield], style: .none)
+        viewStyler.applyBorderStyleToTextFields([userNameTextField, emailTextfield,
+                                                 passwordTextfield], style: .none)
+        customizeProfileImageView()
     }
     
     func customizeProfileImageView() {

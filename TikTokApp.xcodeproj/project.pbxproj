@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CB46807F63A40AC8490AC3B3 /* Pods_TikTokApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD61022BA75E815775E522AF /* Pods_TikTokApp.framework */; };
+		CE13DC1A2AE81B310049AEA1 /* ReferenceDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13DC192AE81B310049AEA1 /* ReferenceDatabase.swift */; };
 		CE174E0D2A9D03990021BD9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E0C2A9D03990021BD9D /* AppDelegate.swift */; };
 		CE174E0F2A9D03990021BD9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E0E2A9D03990021BD9D /* SceneDelegate.swift */; };
 		CE174E112A9D03990021BD9D /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE174E102A9D03990021BD9D /* WelcomeView.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		B90B2FF9C249FDDFFB4B9CB5 /* Pods-TikTokApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokApp.debug.xcconfig"; path = "Target Support Files/Pods-TikTokApp/Pods-TikTokApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CE13DC192AE81B310049AEA1 /* ReferenceDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceDatabase.swift; sourceTree = "<group>"; };
 		CE174E092A9D03990021BD9D /* TikTokApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTokApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE174E0C2A9D03990021BD9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE174E0E2A9D03990021BD9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				CE174E282A9D0B970021BD9D /* Error */,
 				CE174E2A2A9D0BB00021BD9D /* Endpoint.swift */,
 				CE174E2C2A9D0BB70021BD9D /* Feed.swift */,
+				CE13DC192AE81B310049AEA1 /* ReferenceDatabase.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				CE937FD42AE6C2BB00AC75EC /* Localizable.swift in Sources */,
 				CE174E112A9D03990021BD9D /* WelcomeView.swift in Sources */,
 				CE3381252AD83A0A00006C92 /* ViewStyler.swift in Sources */,
+				CE13DC1A2AE81B310049AEA1 /* ReferenceDatabase.swift in Sources */,
 				CE174E0D2A9D03990021BD9D /* AppDelegate.swift in Sources */,
 				CE174E7C2AB10CA00021BD9D /* ViewsID.swift in Sources */,
 				CE174E782AB109B60021BD9D /* UINavigation.swift in Sources */,
