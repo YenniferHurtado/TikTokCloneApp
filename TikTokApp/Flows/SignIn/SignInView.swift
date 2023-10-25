@@ -19,7 +19,7 @@ class SignInView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NavigationItem.setLargeTitle(with: "Sign In", in: self)
+        NavigationItem.setLargeTitle(with: Localizable.signIn_title.localized, in: self)
         customizeUI()
     }
 }
@@ -30,7 +30,6 @@ private extension SignInView {
     func customizeUI() {
         viewStyler.applyBorderAndCornerRadius(to: [emailContainerView, passwordContainerView, signInButton],
                                               radius: 20, borderColor: .gray)
-        
         viewStyler.applyBorderStyleToTextFields([emailTextfield, passwordTextfield], style: .none)
     }
 }

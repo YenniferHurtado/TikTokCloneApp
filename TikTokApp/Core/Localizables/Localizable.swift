@@ -17,6 +17,7 @@ enum Localizable: String {
     case signUp_errorAlertImage
 
     //MARK: SIGNIN
+    case signIn_title
     
     var localized: String {
         NSLocalizedString(String(describing: Self.self) + ".\(rawValue)", comment: "")

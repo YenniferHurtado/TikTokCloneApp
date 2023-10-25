@@ -15,7 +15,7 @@ struct Alert {
                                        message: String,
                                        handler: ((UIAlertAction) -> Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: title, style: .default, handler: handler))
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: handler))
         DispatchQueue.main.async { vc.present(alert, animated: true) }
     }
     

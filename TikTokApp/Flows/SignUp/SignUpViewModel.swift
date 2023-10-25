@@ -13,8 +13,8 @@ class SignUpViewModel {
     
     let pickerImage: UIImage? = nil
     
-    func signUp(with email: String, password: String,
-                username: String, imgProfile: UIImage?,
+    func signUp(with email: String, _ password: String,
+                _ username: String, _ imgProfile: UIImage?,
                 onSucces: @escaping() -> Void,
                 onError: @escaping(_ errorMessage: String) -> Void) {
         
@@ -40,23 +40,25 @@ class SignUpViewModel {
                 }
 
                 let profileStorage = ReferenceDatabase().storageSpecificUser(uid: auth.user.uid)
-                
+                let uid = auth.user.uid
                 let metaData = StorageMetadata()
                 metaData.contentType = "image/jpg"
             
-                self.saveImgProfile(username: username, uid: auth.user.uid, data: imgData,
-                                    profileStorage: profileStorage, metadata: metaData, dict: dictUser) {
+                self.saveImgProfile(with: username, uid, imgData, profileStorage, metaData, dictUser) {
+                    
                     onSucces()
-                } onError: {errorMessage in 
+                    
+                } onError: {errorMessage in
+                    
                     onError(errorMessage)
                 }
             }
         }
     }
     
-    func saveImgProfile(username: String, uid: String, data: Data,
-                        profileStorage: StorageReference, metadata: StorageMetadata,
-                        dict: Dictionary<String,Any>,
+    func saveImgProfile(with username: String, _ uid: String, _ data: Data,
+                        _ profileStorage: StorageReference, _ metadata: StorageMetadata,
+                        _ dict: Dictionary<String,Any>,
                         onSucces: @escaping() -> Void,
                         onError: @escaping(_ errorMessage: String) -> Void) {
         

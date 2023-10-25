@@ -11,3 +11,4 @@
 "Localizable.signUp_errorAlertEmail" = "Ingresa un correo electrónico";
 "Localizable.signUp_errorAlertPassword" = "Ingresa un password";
 "Localizable.signUp_errorAlertPassword" = "Ingresa tu imagen de perfil";
+"Localizable.signIn_title" = "Iniciar sesión";

@@ -46,23 +46,32 @@ private extension SignUpView {
         let username = validateTextfield(userNameTextField, type: .username)
         let email = validateTextfield(emailTextfield, type: .email)
         let password = validateTextfield(passwordTextfield, type: .password)
+        let imgProfile = validateProfileImage()
         
-        if let username, let email, let password {
-            guard let imgProfile = self.imgProfile else {
-                showErrorMessage(type: .avatar)
-                return
-            }
-            
+        if let username, let email, let password, let imgProfile {
+
             view.indicatorStartAnimating()
             
-            viewModel.signUp(with: email, password: password, username: username, imgProfile: imgProfile) { [view] in
+            viewModel.signUp(with: email, password, username, imgProfile) { [view] in
                 view?.indicatorStopAnimating()
-                Alert.showErrorAlert(on: self, message: "EXITOSO")
                 //GO YO ANOTHER VIEW
-            } onError: { errorMessage in
+                
+            } onError: { [view] errorMessage in
+                view?.indicatorStopAnimating()
                 Alert.showErrorAlert(on: self, message: errorMessage)
+                
             }
         }
+    }
+    
+    func validateProfileImage() -> UIImage? {
+        var profileImage: UIImage?
+        if let image = self.imgProfile {
+            profileImage = image
+        } else {
+            Alert.showErrorAlert(on: self, message: Localizable.signUp_errorAlertImage.localized)
+        }
+        return profileImage
     }
     
     func validateTextfield(_ textfield: UITextField, type: UserInputType) -> String? {
@@ -88,16 +97,16 @@ private extension SignUpView {
 
 
 
-//MARK: UI CUSTOMIZE
+//MARK: UI PROGRAMATICALLY
 private extension SignUpView {
     
     func customizeUI() {
+        customizeProfileImageView()
         viewStyler.applyBorderAndCornerRadius(to: [usernameContainerView, emailContainerView,
                                                    passwordContainerView, signUpButton],
                                               radius: 20, borderColor: .gray)
         viewStyler.applyBorderStyleToTextFields([userNameTextField, emailTextfield,
                                                  passwordTextfield], style: .none)
-        customizeProfileImageView()
     }
     
     func customizeProfileImageView() {
